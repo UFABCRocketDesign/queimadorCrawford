@@ -5,16 +5,18 @@ root = tk.Tk()
 dia_atual = dt.date.today()
 
 #Número do experimento e data
-root.title('Experimento número {}, {}/{}/{}'.format(0, dia_atual.day, dia_atual.month, dia_atual.year))
+root.title("Interfácie Queimador Crawford")
 #Tamanho em pixels. Largura por comprimento
 root.geometry("600x480")
 
-#Nome do operador
-label_nome_combustivel = tk.Label(master=root, text="Nome do combustível:")
+#Nome do combustível
+label_nome_combustivel = tk.Label(master=root, text="Nome:")
 entrada_nome_combustivel = tk.Entry(root)
 label_nome_combustivel.place(x=40, y=40)
-entrada_nome_combustivel.place(x=80, y=40)
+entrada_nome_combustivel.place(x=110, y=50)
 nome_combustivel = entrada_nome_combustivel.get()
+label_combustivel = tk.Label(master=root, text="do combustível")
+label_combustivel.place(x=20, y=60)
 
 #Data
 #Pegar data e horário automaticamente do relógio do computador
@@ -122,11 +124,13 @@ entrada_ignicoes.place(x=460, y=100)
 ignicoes = entrada_ignicoes.get()
 
 #Largura do pulso
-label_largura_pulso = tk.Label(master=root, text="Largura dos pulsos:")
+label_largura_pulso = tk.Label(master=root, text="Largura")
 entrada_largura_pulso = tk.Entry(master=root)
 label_largura_pulso.place(x=410, y=130)
 entrada_largura_pulso.place(x=460, y=130)
 largura_pulso = entrada_largura_pulso.get()
+label_pulso = tk.Label(master=root, text="dos pulsos")
+label_pulso.place(x=400, y=147)
 
 #Vale
 label_vale = tk.Label(master=root, text="Vale")
