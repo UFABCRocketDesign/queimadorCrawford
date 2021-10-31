@@ -12,6 +12,9 @@
 * 0.0.3
   * Ajuste visual das labels, entry boxes e botões
 
+* 0.0.4
+  * Simetrização da GUI
+
 Implementações a serem feita:
   - Transformar as entradas de strings para números
 
