@@ -1,11 +1,12 @@
 import tkinter as tk
 import datetime as dt
+import serial
 
 root = tk.Tk()
 dia_atual = dt.date.today()
 
 #Número do experimento e data
-root.title("Interfácie Queimador Crawford")
+root.title("Interface Queimador Crawford")
 #Tamanho em pixels. Largura por comprimento
 root.geometry("600x480")
 
@@ -100,47 +101,47 @@ pressao_interna = entrada_pressao_interna.get()
 
 #Delay
 label_delay = tk.Label(master=root, text="Delay")
-label_delay.place(x=460, y=10)
+label_delay.place(x=410, y=10)
 
 #Checagem de ignição
 label_start = tk.Label(master=root, text="Start:")
 entrada_start = tk.Entry(master=root)
-label_start.place(x=410, y=40)
-entrada_start.place(x=440, y=40)
+label_start.place(x=340, y=40)
+entrada_start.place(x=370, y=40)
 start = entrada_start.get()
 
 #tempo de queima entre os fios
 label_offset = tk.Label(master=root, text="Offset:")
 entrada_offset = tk.Entry(master=root)
-label_offset.place(x=410, y=70)
-entrada_offset.place(x=450, y=70)
+label_offset.place(x=340, y=70)
+entrada_offset.place(x=380, y=70)
 offset = entrada_offset.get()
 
 #Número de ignições
 label_ignocoes = tk.Label(master=root, text="Ignições:")
 entrada_ignicoes = tk.Entry(master=root)
-label_ignocoes.place(x=410, y=100)
-entrada_ignicoes.place(x=460, y=100)
+label_ignocoes.place(x=340, y=100)
+entrada_ignicoes.place(x=390, y=100)
 ignicoes = entrada_ignicoes.get()
 
 #Largura do pulso
 label_largura_pulso = tk.Label(master=root, text="Largura")
 entrada_largura_pulso = tk.Entry(master=root)
-label_largura_pulso.place(x=410, y=130)
-entrada_largura_pulso.place(x=460, y=130)
+label_largura_pulso.place(x=340, y=130)
+entrada_largura_pulso.place(x=390, y=130)
 largura_pulso = entrada_largura_pulso.get()
 label_pulso = tk.Label(master=root, text="dos pulsos")
-label_pulso.place(x=400, y=147)
+label_pulso.place(x=330, y=147)
 
 #Vale
 label_vale = tk.Label(master=root, text="Vale")
-label_vale.place(x=460, y=170)
+label_vale.place(x=390, y=170)
 
 #Tempo entre os pulsos
 label_offtiming = tk.Label(master=root, text="Offtiming:")
 entrada_offtiming = tk.Entry(master=root)
-label_offtiming.place(x=410, y=200)
-entrada_offtiming.place(x=468, y=200)
+label_offtiming.place(x=340, y=200)
+entrada_offtiming.place(x=398, y=200)
 offtiming = entrada_offtiming.get()
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -161,7 +162,7 @@ botao_START = tk.Button(
     bg="grey",
     fg="black"
 )
-botao_START.place(x=380, y=260)
+botao_START.place(x=330, y=280)
 
 
 root.mainloop()
